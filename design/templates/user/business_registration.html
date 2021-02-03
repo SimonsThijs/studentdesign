@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Business Registration</h1>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock %} 
